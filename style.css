@@ -241,7 +241,7 @@ section {
 .footer {
     background-color: #000016;
     color: #fff;
-    padding: 2em;
+    padding: 2.0em;
     display: flex;
     justify-content: space-between;
 }
