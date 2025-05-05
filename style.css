@@ -217,6 +217,37 @@ section {
     font-weight: 800;
     margin-top: 10px;
 }
+/* .about {
+    background: white;
+    color: black;
+    padding: 100px 200px;
+}
+
+.about-content {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+} */
+ /* ------------- */
+ /* Java Script  */
+ @keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-text {
+    animation: slideIn 1s ease-out forwards;
+}
+
+
 .more-details {
     text-decoration: none;
     color: #3a6cf4;
