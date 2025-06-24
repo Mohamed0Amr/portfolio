@@ -217,6 +217,7 @@ section {
     font-weight: 800;
     margin-top: 10px;
 }
+
 /* .about {
     background: white;
     color: black;
@@ -230,13 +231,14 @@ section {
     max-width: 900px;
     margin: auto;
 } */
- /* ------------- */
- /* Java Script  */
- @keyframes slideIn {
+/* ------------- */
+/* Java Script  */
+@keyframes slideIn {
     0% {
         transform: translateY(20px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -257,7 +259,7 @@ section {
     color: #601cfc;
 }
 
-.contact .icon{
+.contact .icon {
     font-size: 4.5em;
 }
 
@@ -286,60 +288,81 @@ section {
     color: #3a6cf4;
 }
 
-.footer .social-icons a{
+.footer .social-icons a {
     font-size: 1.3em;
     padding: 0 12px 0 0;
 }
 
-@media (max-width:1023px){
-    header{
+.contact .info p,
+.contact .info a {
+    font-size: 1.0em;
+    color: #000;
+    text-decoration: none;
+}
+
+.email-link {
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #3a6cf4;
+    text-decoration: underline;
+}
+.email-link:hover {
+    color: #3a6cf4;
+    text-decoration: underline;
+}
+
+@media (max-width:1023px) {
+    header {
         padding: 12px 20px;
     }
 
-    .navigation a{
+    .navigation a {
         padding-left: 10px;
     }
 
-    .title{
+    .title {
         font-size: 1.8em;
     }
 
-    section{
+    section {
         padding: 80px 20px;
     }
 
-    .main-content h2{
+    .main-content h2 {
         font-size: 1em;
     }
 
-    .main-content h3{
+    .main-content h3 {
         font-size: 1.6em;
     }
 
-    .content{
+    .content {
         flex-direction: column;
         align-items: center;
     }
 
 }
 
-@media (max-width:641px){
-    body{
+@media (max-width:641px) {
+    body {
         font-size: 12px;
     }
 
-    .main-content h2{
+    .main-content h2 {
         font-size: 0.8em;
     }
 
-    .main-content h3{
+    .main-content h3 {
         font-size: 1.4em;
     }
 }
 
-@media (max-width:300px){
-    body{
+@media (max-width:300px) {
+    body {
         font-size: 10px;
-     
+
     }
 }
