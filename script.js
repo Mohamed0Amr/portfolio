@@ -2,34 +2,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const introText = document.querySelector(".main h2 span");
     introText.classList.add("animate-text");
 });
-// Update your script.js with this improved version
-document.addEventListener("DOMContentLoaded", function() {
-    const emailLinks = document.querySelectorAll('.email-link');
+document.getElementById('professional-email').addEventListener('click', function(e) {
+    e.preventDefault();
     
-    emailLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-                e.preventDefault();
-                window.location.href = `mailto:mohamedamr9722@gmail.com?subject=Collaboration%20Opportunity&body=Hi%20Mohamed,%0D%0A%0D%0AI%20would%20like%20to%20discuss%20a%20project%20opportunity%20with%20you.%20Please%20let%20me%20know%20your%20availability.%0D%0A%0D%0ABest%20regards,`;
-            }
+    // Track the click (you can use Google Analytics or similar)
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'email_click', {
+            'event_category': 'engagement',
+            'event_label': 'professional_contact'
         });
-        
-        link.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            navigator.clipboard.writeText('mohamedamr9722@gmail.com');
-            // Consider using a subtle notification instead of alert
-            const notification = document.createElement('div');
-            notification.textContent = 'Email copied to clipboard!';
-            notification.style.position = 'fixed';
-            notification.style.bottom = '20px';
-            notification.style.right = '20px';
-            notification.style.padding = '10px 20px';
-            notification.style.background = '#3a6cf4';
-            notification.style.color = 'white';
-            notification.style.borderRadius = '5px';
-            notification.style.zIndex = '1000';
-            document.body.appendChild(notification);
-            setTimeout(() => notification.remove(), 2000);
-        });
-    });
+    }
+    
+    // Compose email with professional subject/body
+    const subject = "Project Collaboration Inquiry";
+    const body = `Dear Mohamed,\n\nI came across your impressive portfolio and would like to discuss a potential collaboration. \n\nCould you please share your availability for a brief discussion?\n\nBest regards,\n[Your Name]`;
+    
+    // Try Gmail first, then fallback to mailto:
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=mohamedamr9722@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
+    
+    // Fallback for non-Gmail users
+    setTimeout(() => {
+        window.location.href = `mailto:mohamedamr9722@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }, 500);
 });
