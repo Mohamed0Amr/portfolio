@@ -121,6 +121,17 @@ body {
     justify-content: center;
 }
 
+.featured-card {
+    display: flex;
+    background: #141432;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    max-width: 500px;
+    flex-direction: column;
+    margin-bottom: 40px; /* add this */
+}
+
 /* ================= PROJECT CARDS ================= */
 .project-card {
     display: flex;
