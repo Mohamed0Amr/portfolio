@@ -8,6 +8,7 @@
     scroll-behavior: smooth;
 }
 
+/* HEADER */
 header {
     background-color: #f0f0f0;
     width: 100%;
@@ -33,26 +34,24 @@ header {
     font-weight: 500;
     font-size: 1.1em;
     padding-left: 30px;
-    transition: color 0.3s ease;
 }
 
 .navigation a:hover {
     color: #601cfc;
 }
 
+/* SECTIONS */
 section {
     padding: 100px 200px;
 }
 
+/* MAIN SECTION */
 .main {
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
     background-color: rgb(9, 9, 71);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 .main h2 {
@@ -101,13 +100,9 @@ section {
     color: #fff;
     font-size: 1.7em;
     padding-right: 30px;
-    transition: transform 0.3s ease;
 }
 
-.social-icons a:hover {
-    transform: translateY(-3px);
-}
-
+/* SERVICES */
 .title {
     display: flex;
     justify-content: center;
@@ -158,6 +153,7 @@ section {
 /* LATEST PROJECTS SECTION */
 .latest-projects {
     background-color: #000016;
+    padding: 100px 200px;
 }
 
 .section-subtitle {
@@ -174,14 +170,14 @@ section {
     overflow: hidden;
     margin-bottom: 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
+    transition: transform 0.3s ease;
     max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .video-project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(58, 108, 244, 0.2);
 }
 
 .video-link {
@@ -220,21 +216,11 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
 }
 
 .play-button i {
     color: white;
     font-size: 40px;
-    transition: transform 0.3s ease;
-}
-
-.video-link:hover .play-button {
-    background: rgba(58, 108, 244, 0.9);
-}
-
-.video-link:hover .play-button i {
-    transform: scale(1.1);
 }
 
 .video-project-card .project-info {
@@ -278,18 +264,11 @@ section {
     border-radius: 20px;
     font-size: 0.85em;
     border: 1px solid rgba(58, 108, 244, 0.3);
-    transition: all 0.3s ease;
-}
-
-.tech-tag:hover {
-    background-color: rgba(58, 108, 244, 0.2);
-    transform: translateY(-2px);
 }
 
 .project-links {
     display: flex;
     gap: 15px;
-    flex-wrap: wrap;
 }
 
 .video-demo-btn, .github-btn {
@@ -300,7 +279,6 @@ section {
     border-radius: 5px;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
 }
 
 .video-demo-btn {
@@ -310,7 +288,6 @@ section {
 
 .video-demo-btn:hover {
     background-color: #0a49f6;
-    transform: translateY(-2px);
 }
 
 .github-btn {
@@ -320,16 +297,12 @@ section {
 
 .github-btn:hover {
     background-color: #444;
-    transform: translateY(-2px);
 }
 
 /* ALL PROJECTS SECTION */
 .projects {
     background-color: #0a0a1a;
-}
-
-.projects .title {
-    color: #fff;
+    padding: 100px 200px;
 }
 
 .project-card {
@@ -347,15 +320,10 @@ section {
     transform: scale(1.1);
 }
 
-.project-card:hover .project-image img {
-    opacity: 0.9;
-}
-
 .project-image img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    transition: opacity 0.3s ease;
 }
 
 .project-info {
@@ -380,7 +348,6 @@ section {
     text-decoration: none;
     color: #3a6cf4;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
 .more-details:hover {
@@ -388,23 +355,11 @@ section {
     text-decoration: underline;
 }
 
-/* Java Script Animation */
-@keyframes slideIn {
-    0% {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.animate-text {
-    animation: slideIn 1s ease-out forwards;
-}
-
 /* CONTACT SECTION */
+.contact {
+    padding: 100px 200px;
+}
+
 .contact .icon {
     font-size: 4.5em;
 }
@@ -421,7 +376,6 @@ section {
 
 .email-link {
     color: #000;
-    transition: color 0.3s ease;
 }
 
 .email-link:hover {
@@ -472,41 +426,18 @@ section {
         padding: 80px 20px;
     }
 
-    .main h2 {
-        font-size: 1.2em;
-    }
-
-    .main h3 {
-        font-size: 1.6em;
-    }
-
-    .content {
-        flex-direction: column;
-        align-items: center;
+    .latest-projects, 
+    .projects,
+    .contact {
+        padding: 80px 20px;
     }
 
     .video-thumbnail {
         height: 300px;
     }
-
-    .video-project-card .project-title span {
-        font-size: 1.5em;
-    }
 }
 
 @media (max-width: 641px) {
-    body {
-        font-size: 14px;
-    }
-
-    .main h2 {
-        font-size: 1em;
-    }
-
-    .main h3 {
-        font-size: 1.4em;
-    }
-
     .navigation {
         display: flex;
         flex-wrap: wrap;
@@ -529,29 +460,13 @@ section {
         padding: 20px;
     }
 
-    .video-project-card .project-title span {
-        font-size: 1.3em;
-    }
-
     .project-links {
         flex-direction: column;
-        width: 100%;
-    }
-
-    .video-demo-btn, .github-btn {
-        width: 100%;
-        justify-content: center;
     }
 
     .footer {
         flex-direction: column;
         text-align: center;
         gap: 20px;
-    }
-}
-
-@media (max-width: 300px) {
-    body {
-        font-size: 12px;
     }
 }
