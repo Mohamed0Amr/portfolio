@@ -17,7 +17,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 200px;
-    /*top bottom and right left*/
 }
 
 .logo {
@@ -26,7 +25,6 @@ header {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.8em;
-    /* 1.8 * 16 = px*/
 }
 
 .navigation a {
@@ -35,6 +33,7 @@ header {
     font-weight: 500;
     font-size: 1.1em;
     padding-left: 30px;
+    transition: color 0.3s ease;
 }
 
 .navigation a:hover {
@@ -102,6 +101,11 @@ section {
     color: #fff;
     font-size: 1.7em;
     padding-right: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
 }
 
 .title {
@@ -151,12 +155,181 @@ section {
     margin: 10px;
 }
 
-.projects {
+/* LATEST PROJECTS SECTION */
+.latest-projects {
     background-color: #000016;
 }
 
-.projects .content {
-    margin-top: 30px;
+.section-subtitle {
+    text-align: center;
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 50px;
+    opacity: 0.8;
+}
+
+.video-project-card {
+    background-color: #1a1a2e;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.video-project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(58, 108, 244, 0.2);
+}
+
+.video-link {
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-link:hover .video-thumbnail img {
+    transform: scale(1.05);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.play-button i {
+    color: white;
+    font-size: 40px;
+    transition: transform 0.3s ease;
+}
+
+.video-link:hover .play-button {
+    background: rgba(58, 108, 244, 0.9);
+}
+
+.video-link:hover .play-button i {
+    transform: scale(1.1);
+}
+
+.video-project-card .project-info {
+    padding: 30px;
+}
+
+.video-project-card .project-category {
+    color: #4e9eff;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.video-project-card .project-title span {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.video-project-card .project-description {
+    color: #ccc;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tech-tag {
+    background-color: rgba(58, 108, 244, 0.1);
+    color: #4e9eff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    border: 1px solid rgba(58, 108, 244, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background-color: rgba(58, 108, 244, 0.2);
+    transform: translateY(-2px);
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.video-demo-btn, .github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.video-demo-btn {
+    background-color: #3a6cf4;
+    color: white;
+}
+
+.video-demo-btn:hover {
+    background-color: #0a49f6;
+    transform: translateY(-2px);
+}
+
+.github-btn {
+    background-color: #333;
+    color: white;
+}
+
+.github-btn:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+}
+
+/* ALL PROJECTS SECTION */
+.projects {
+    background-color: #0a0a1a;
+}
+
+.projects .title {
+    color: #fff;
 }
 
 .project-card {
@@ -170,35 +343,19 @@ section {
     transition: 0.7s ease;
 }
 
-.project-card-web {
-    background-color: #fff;
-    border: 1px solid #fff;
-    max-height: 20em;
-    width: 23em;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 20px;
-    transition: 0.7s ease;
-}
-
-.project-card-web:hover {
-    transform: scale(1.1);
-}
-
-.project-card-web:hover .project-image {
-    opacity: 0.9;
-}
-
 .project-card:hover {
     transform: scale(1.1);
 }
 
-.project-card:hover .project-image {
+.project-card:hover .project-image img {
     opacity: 0.9;
 }
 
 .project-image img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
 }
 
 .project-info {
@@ -213,32 +370,30 @@ section {
 .project-title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-transform: uppercase;
     font-weight: 800;
     margin-top: 10px;
 }
 
-/* .about {
-    background: white;
-    color: black;
-    padding: 100px 200px;
+.more-details {
+    text-decoration: none;
+    color: #3a6cf4;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.about-content {
-    font-size: 1.2em;
-    line-height: 1.8;
-    text-align: center;
-    max-width: 900px;
-    margin: auto;
-} */
-/* ------------- */
-/* Java Script  */
+.more-details:hover {
+    color: #601cfc;
+    text-decoration: underline;
+}
+
+/* Java Script Animation */
 @keyframes slideIn {
     0% {
         transform: translateY(20px);
         opacity: 0;
     }
-
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -249,16 +404,7 @@ section {
     animation: slideIn 1s ease-out forwards;
 }
 
-
-.more-details {
-    text-decoration: none;
-    color: #3a6cf4;
-}
-
-.more-details:hover {
-    color: #601cfc;
-}
-
+/* CONTACT SECTION */
 .contact .icon {
     font-size: 4.5em;
 }
@@ -267,16 +413,30 @@ section {
     color: #000;
 }
 
-.contact .info p {
+.contact .info p, .contact .info a {
     font-size: 1.0em;
+    color: #000;
+    text-decoration: none;
 }
 
+.email-link {
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #3a6cf4;
+    text-decoration: underline;
+}
+
+/* FOOTER */
 .footer {
     background-color: #000016;
     color: #fff;
     padding: 2.0em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .footer-title {
@@ -293,34 +453,15 @@ section {
     padding: 0 12px 0 0;
 }
 
-.contact .info p,
-.contact .info a {
-    font-size: 1.0em;
-    color: #000;
-    text-decoration: none;
-}
-
-.email-link {
-    color: #000;
-    transition: color 0.3s ease;
-}
-
-.email-link:hover {
-    color: #3a6cf4;
-    text-decoration: underline;
-}
-.email-link:hover {
-    color: #3a6cf4;
-    text-decoration: underline;
-}
-
-@media (max-width:1023px) {
+/* RESPONSIVE DESIGN */
+@media (max-width: 1023px) {
     header {
         padding: 12px 20px;
     }
 
     .navigation a {
         padding-left: 10px;
+        font-size: 1em;
     }
 
     .title {
@@ -331,11 +472,11 @@ section {
         padding: 80px 20px;
     }
 
-    .main-content h2 {
-        font-size: 1em;
+    .main h2 {
+        font-size: 1.2em;
     }
 
-    .main-content h3 {
+    .main h3 {
         font-size: 1.6em;
     }
 
@@ -344,25 +485,73 @@ section {
         align-items: center;
     }
 
+    .video-thumbnail {
+        height: 300px;
+    }
+
+    .video-project-card .project-title span {
+        font-size: 1.5em;
+    }
 }
 
-@media (max-width:641px) {
+@media (max-width: 641px) {
     body {
-        font-size: 12px;
+        font-size: 14px;
     }
 
-    .main-content h2 {
-        font-size: 0.8em;
+    .main h2 {
+        font-size: 1em;
     }
 
-    .main-content h3 {
+    .main h3 {
         font-size: 1.4em;
     }
+
+    .navigation {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .video-thumbnail {
+        height: 250px;
+    }
+
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .play-button i {
+        font-size: 30px;
+    }
+
+    .video-project-card .project-info {
+        padding: 20px;
+    }
+
+    .video-project-card .project-title span {
+        font-size: 1.3em;
+    }
+
+    .project-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .video-demo-btn, .github-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
 }
 
-@media (max-width:300px) {
+@media (max-width: 300px) {
     body {
-        font-size: 10px;
-
+        font-size: 12px;
     }
 }
