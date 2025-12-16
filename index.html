@@ -1,247 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Amr | Software Engineer</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
-    <title>Mohamed Amr</title>
-    <!-- <style>
-        /* Temporary inline styles to debug */
-        body {
-            background: #000016;
-        }
-    </style> -->
 </head>
 
 <body>
-    <header>
-        <a href="#" class="logo">Mohamed</a>
-        <nav class="navigation">
-            <a href="#services">Services</a>
-            <a href="#latest-projects">Latest Projects</a>
-            <a href="#projects">All Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <section class="main">
-        <div>
-            <h2>Hello, I'm Mohamed<br>
-                <span>Software Engineer</span>
-            </h2>
-            <h3>Transforming ideas into reality</h3>
-            <a href="#latest-projects" class="main-btn">View my work</a>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/mohamed-amr-026b69219/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/moohamedamrr/profilecard/?igsh=ZnZsOWY1emhjMW1h"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/Mohamed0Amr"><i class="fa-brands fa-square-github"></i></a>
-                <a href="https://www.facebook.com/Mohamed.Amr.523/"><i class="fa-brands fa-facebook"></i></a>
-            </div>
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <a href="#" class="logo">Mohamed Amr</a>
+    <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#featured">Featured</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Hello, I'm Mohamed</h1>
+        <h2>Software Engineer</h2>
+        <p>
+            I build modern mobile applications with clean architecture,
+            scalable code, and strong UI/UX.
+        </p>
+        <a href="#featured" class="btn-primary">View My Work</a>
+    </div>
+</section>
+
+<!-- ================= FEATURED PROJECT ================= -->
+<section class="featured" id="featured">
+
+    <h2 class="section-title">Featured Project</h2>
+    <p class="section-subtitle">
+        A real-world application highlighting my strongest technical skills
+    </p>
+
+    <div class="project-card featured-card">
+
+        <div class="project-image">
+            <img src="images/QuraanKareem.png" alt="Quran Kareem App">
+            <a href="https://www.loom.com/share/079efe82c55b46b6b9ae7bcfc98ca2cf"
+               target="_blank"
+               class="play-overlay">
+                <i class="fas fa-play"></i>
+            </a>
         </div>
-    </section>
 
-    <section class="cards" id="services">
-        <h2 class="title">Services</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-brands fa-flutter"></i>
-                </div>
-                <div class="info">
-                    <h3>Flutter Frontend</h3>
-                    <p>Building responsive and performant mobile interfaces using Flutter</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-brands fa-node-js"></i>
-                </div>
-                <div class="info">
-                    <h3>Node.js Backend</h3>
-                    <p>Creating secure and scalable backend services with Node.js.</p>
-                </div>
+        <div class="project-content">
+            <span class="project-type">Mobile Application</span>
+            <h3>Quran Kareem App</h3>
+
+            <p class="project-description">
+                A comprehensive Quran application featuring audio recitations,
+                translations, bookmarks, and smooth navigation.
+                Built for performance, accessibility, and scalability.
+            </p>
+
+            <div class="tech-stack">
+                <span>Flutter</span>
+                <span>Firebase</span>
+                <span>REST APIs</span>
+                <span>Clean Architecture</span>
             </div>
 
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-database"></i>
-                </div>
-                <div class="info">
-                    <h3>MySQL Database</h3>
-                    <p>Managing relational data and complex queries using MySQL.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LATEST PROJECTS WITH VIDEOS -->
-    <section class="latest-projects" id="latest-projects">
-        <h2 class="title">Latest Projects</h2>
-        <p class="section-subtitle">Click on the project cover to watch the video demonstration</p>
-        <div class="content">
-            <!-- Quran Kareem Project -->
-            <div class="video-project-card">
-                <a href="https://www.loom.com/share/079efe82c55b46b6b9ae7bcfc98ca2cf" target="_blank" class="video-link">
-                    <div class="video-thumbnail">
-                        <!-- Use an existing image or add a placeholder -->
-                        <img src="images/QuraanKareem.png" alt="Quran Kareem App Cover" onerror="this.src='https://via.placeholder.com/800x400/1a1a2e/4e9eff?text=Quran+Kareem+App'">
-                        <div class="play-button">
-                            <i class="fas fa-play-circle"></i>
-                        </div>
-                    </div>
+            <div class="project-actions">
+                <a href="https://www.loom.com/share/079efe82c55b46b6b9ae7bcfc98ca2cf"
+                   target="_blank"
+                   class="btn-primary">
+                    <i class="fas fa-play-circle"></i> Live Demo
                 </a>
-                <div class="project-info">
-                    <p class="project-category">Mobile Application</p>
-                    <strong class="project-title">
-                        <span>Quran Kareem App</span>
-                        <p class="project-description">A comprehensive Quran application with audio recitations, translations, and bookmarking features. Built with Flutter and Firebase.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">API Integration</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://www.loom.com/share/079efe82c55b46b6b9ae7bcfc98ca2cf" target="_blank" class="video-demo-btn">
-                                <i class="fas fa-play-circle"></i> Watch Demo
-                            </a>
-                            <a href="https://github.com/Mohamed0Amr" target="_blank" class="github-btn">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </strong>
-                </div>
-            </div>
-
-            <!-- NeuroClick Project -->
-            <div class="video-project-card">
-                <a href="https://www.loom.com/share/your-neuroclick-video-id" target="_blank" class="video-link">
-                    <div class="video-thumbnail">
-                        <!-- Use an existing image from your images folder -->
-                        <img src="images/NeuroClickDarkBack.jpg" alt="NeuroClick App Cover">
-                        <div class="play-button">
-                            <i class="fas fa-play-circle"></i>
-                        </div>
-                    </div>
+                <a href="https://github.com/Mohamed0Amr"
+                   target="_blank"
+                   class="btn-secondary">
+                    <i class="fab fa-github"></i> Source Code
                 </a>
-                <div class="project-info">
-                    <p class="project-category">Mental Health Solution</p>
-                    <strong class="project-title">
-                        <span>NeuroClick</span>
-                        <p class="project-description">Mindset improvement application with cognitive exercises, progress tracking, and personalized recommendations.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://www.loom.com/share/your-neuroclick-video-id" target="_blank" class="video-demo-btn">
-                                <i class="fas fa-play-circle"></i> Watch Demo
-                            </a>
-                            <a href="https://github.com/Mohamed0Amr/NeuroClickApp.git" target="_blank" class="github-btn">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </strong>
-                </div>
             </div>
-
         </div>
-    </section>
 
-    <!-- ALL PROJECTS (Image based) -->
-    <section class="projects" id="projects">
-        <h2 class="title">All Projects</h2>
-        <div class="content">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/NeuroClickDarkBack.jpg" alt="NeuroClick" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Mindset Solution</p>
-                    <strong class="project-title">
-                        <span>NeuroClick</span>
-                        <a href="https://github.com/Mohamed0Amr/NeuroClickApp.git" class="more-details">More details</a>
-                    </strong>
-                </div>
+    </div>
+</section>
+
+<!-- ================= OTHER PROJECTS ================= -->
+<section class="projects" id="projects">
+    <h2 class="section-title">Other Projects</h2>
+
+    <div class="project-list">
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="images/NeuroClickDarkBack.jpg" alt="NeuroClick">
             </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/BalancedMeal.png" alt="Balanced Meal" />
+            <div class="project-content">
+                <span class="project-type">Mobile Application</span>
+                <h3>NeuroClick</h3>
+                <p class="project-description">
+                    AI-powered app supporting neurodivergent individuals
+                    using smart interactions and machine learning.
+                </p>
+                <div class="tech-stack">
+                    <span>Flutter</span>
+                    <span>Firebase</span>
+                    <span>ML</span>
                 </div>
-                <div class="project-info">
-                    <p class="project-category">Balanced Meal</p>
-                    <strong class="project-title">
-                        <span>Balanced Meal</span>
-                        <a href="https://app.flutterflow.io/run/G9tJZG5Hye4G1YGUpMLJ" class="more-details">More details</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/AngazTalbk.jpg" alt="AngazTalbk" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Digital menus for easy ordering</p>
-                    <strong class="project-title">
-                        <span>AngazTalbk</span>
-                        <a href="https://github.com/Mohamed0Amr/RestaurantMobile-Project.git" class="more-details">More
-                            details</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/BankingApp.jpg" alt="Banking App" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Banking App</p>
-                    <strong class="project-title">
-                        <span>Banking</span>
-                        <a href="https://github.com/Mohamed0Amr/BankingApp" class="more-details">More details</a>
-                    </strong>
+                <div class="project-actions">
+                    <a href="https://github.com/Mohamed0Amr/NeuroClickApp.git"
+                       target="_blank"
+                       class="btn-secondary">
+                        View Code
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="cards contact" id="contact">
-        <h2 class="title">Let's work together</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <div class="info">
-                    <h3>Phone</h3>
-                    <p>+201156752576</p>
-                </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="images/BalancedMeal.png" alt="Balanced Meal">
             </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-envelope"></i>
+            <div class="project-content">
+                <span class="project-type">Health Application</span>
+                <h3>Balanced Meal</h3>
+                <p class="project-description">
+                    A nutrition-focused app helping users build healthy meals
+                    through a clean and simple user interface.
+                </p>
+                <div class="tech-stack">
+                    <span>Flutter</span>
+                    <span>FlutterFlow</span>
                 </div>
-                <div class="info">
-                    <h3>Email</h3>
-                    <a href="#" id="professional-email" class="email-link">mohamedamr9722@gmail.com</a>
+                <div class="project-actions">
+                    <a href="https://app.flutterflow.io/run/G9tJZG5Hye4G1YGUpMLJ"
+                       target="_blank"
+                       class="btn-secondary">
+                        Live Preview
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-    
-    <footer class="footer">
-        <p class="footer-title">Copyrights @ <span>Mohamed Amr</span></p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/mohamed-amr-026b69219/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/moohamedamrr/profilecard/?igsh=ZnZsOWY1emhjMW1h"><i
-                    class="fa-brands fa-instagram"></i></a>
-            <a href="https://github.com/Mohamed0Amr"><i class="fa-brands fa-square-github"></i></a>
-            <a href="https://www.facebook.com/Mohamed.Amr.523/"><i class="fa-brands fa-facebook"></i></a>
-        </div>
-    </footer>
 
-    <script src="script.js"></script>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+    <h2 class="section-title">Let’s Work Together</h2>
+    <p>Email</p>
+    <a href="mailto:mohamedamr9722@gmail.com">mohamedamr9722@gmail.com</a>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    © 2025 Mohamed Amr
+</footer>
+
 </body>
 </html>
